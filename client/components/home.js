@@ -5,7 +5,6 @@ import Header from './headers'
 import RepoList from './userepos'
 import Readme from './readme'
 import Dummy from './dummy-view'
-import Footer from './footer'
 
 const Home = () => {
   const [repos, setRepos] = useState([])
@@ -13,6 +12,7 @@ const Home = () => {
   const { userName, repoName } = useParams()
   const [user, setUser] = useState({})
   const [commit, setCommit] = useState({})
+
   useEffect(() => {
     if (userName !== undefined) {
       axios.get(`https://api.github.com/users/${userName}/repos `).then(({ data }) => {
@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <div>
       <Header userName={userName} repos={repos} reponame={repoName} readme={readme} user={user} />
-      <div>
+      <div className="container page-wrap mx-auto pt-3 pb-20">
         <Route exact path="/" component={() => <Dummy />} />
         <Route
           exact
@@ -48,7 +48,6 @@ const Home = () => {
           )}
         />
         <Route exact path="/:userName/:repoName" component={() => <Readme readme={readme} />} />
-        <Footer />
       </div>
     </div>
   )

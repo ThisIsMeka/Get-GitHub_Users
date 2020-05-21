@@ -16,7 +16,7 @@ Head.propTypes = {
 }
 
 Head.defaultProps = {
-  title: 'igorsamartsev.ru'
+  title: 'meerim084@gmail.com'
 }
 
 export default Head
