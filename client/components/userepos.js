@@ -11,7 +11,7 @@ const RepoList = (props) => {
   }
   const filterList = props.repos.filter((el) => el.name.includes(search))
   return (
-    <div className=" flex flex-col w-150">
+    <div className=" flex flex-col page-wrap">
       <Head title="Repositories" />
       <div className="max-w-xl mt-6 mb-12 border-b border-b-2 border-gray-800 py-1 ml-48">
         <input
