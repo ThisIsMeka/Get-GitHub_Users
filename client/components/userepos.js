@@ -22,7 +22,7 @@ const RepoList = (props) => {
         />
       </div>
       <div>
-        <table className="mx-auto min-w-full">
+        <table className="mx-auto">
           <thead>
             <tr className="px-4 py-4 border-b border-gray-300 bg-gray-300">
               <th className="px-5 py-4 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
