@@ -4,7 +4,7 @@ import axios from 'axios'
 import Header from './headers'
 import RepoList from './userepos'
 import Readme from './readme'
-import Dummy from './dummy-view'
+import Footer from './footer'
 
 const Home = () => {
   const [repos, setRepos] = useState([])
@@ -39,7 +39,6 @@ const Home = () => {
     <div>
       <Header userName={userName} repos={repos} reponame={repoName} readme={readme} user={user} />
       <div className="container page-wrap mx-auto pt-3 pb-20">
-        <Route exact path="/" component={() => <Dummy />} />
         <Route
           exact
           path="/:userName"
@@ -49,6 +48,7 @@ const Home = () => {
         />
         <Route exact path="/:userName/:repoName" component={() => <Readme readme={readme} />} />
       </div>
+      <Footer />
     </div>
   )
 }

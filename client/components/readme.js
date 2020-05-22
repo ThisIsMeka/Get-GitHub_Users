@@ -2,14 +2,18 @@ import React from 'react'
 import HashLoader from 'react-spinners/HashLoader'
 import Markdown from 'markdown-to-jsx'
 import '../assets/scss/markdown.scss'
-import Footer from './footer'
 
 const Readme = (props) => {
   return (
-    <div className="markdown-body">
-      <Markdown>{props.readme}</Markdown>
-      <HashLoader color="flex justify-center items-center mt-40" />
-      <Footer className="text-white" />
+    <div>
+      <div className="markdown-body">
+        <Markdown>{props.readme}</Markdown>
+      </div>
+      {!props.readme.length && (
+        <div className="flex justify-center items-center mt-40">
+          <HashLoader className=" color-#4a5568" />
+        </div>
+      )}
     </div>
   )
 }

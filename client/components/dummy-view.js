@@ -16,7 +16,7 @@ const Dummy = () => {
   return (
     <div>
       <Head title="Hello" />
-      <div className="main-bg flex justify-center items-center h-screen pb-20">
+      <div className="main-bg flex justify-center items-center h-screen">
         <div className="bg-gray-800 text-white font-bold rounded-lg border shadow-lg py-10 px-16">
           <img
             className="mx-auto h-16 w-16 mb-4"

@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom'
 
 const Header = (props) => {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-2 ">
-      <div className="flex items-center text-white p-0 m-0">
+    <nav className="flex items-center justify-between flex-wrap bg-gray-800">
+      <div className="flex items-center text-white mr-10">
         {props.userName && (
-          <img className="w-16 h-16 rounded mr-10" src={props.user.avatar_url} alt="avatar" />
+          <img
+            className=" w-16 h-16 rounded mx-10 border-2 border-white hover:border-transparent "
+            src={props.user.avatar_url}
+            alt="avatar"
+          />
         )}
         {props.userName && (
           <span className="text-xl text-white uppercase ">{props.user.login}</span>
